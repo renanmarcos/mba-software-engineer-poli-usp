@@ -8,4 +8,8 @@ public class ItemPacote {
     public ItemPacote(BigDecimal preco) {
         this.preco = preco;
     }
+
+    public BigDecimal getPreco() {
+        return this.preco;
+    }
 }

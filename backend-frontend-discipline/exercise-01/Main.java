@@ -15,13 +15,13 @@ public class Main {
         Cliente cliente = new Cliente("Roberto", new Date(1995, 02, 10));
 
         Pacote pacote = new Pacote("Combo 1");
-        cliente.contratar(new Date(), new BigDecimal(23.1), pacote);
+        cliente.contratar(new Date(), pacote);
 
         List<ItemPacote> itens = new ArrayList<ItemPacote>();
         ItemPacote item1 = new Hospedagem(new BigDecimal(11), "Resort 4 estrelas", "rua X");
         itens.add(item1);
 
         Pacote segundoPacote = new Pacote("Combo 2", itens);
-        cliente.contratar(new Date(), new BigDecimal(23.1), segundoPacote);
+        cliente.contratar(new Date(), segundoPacote);
     }
 }

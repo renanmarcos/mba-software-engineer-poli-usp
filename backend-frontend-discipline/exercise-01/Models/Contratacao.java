@@ -8,9 +8,9 @@ public class Contratacao {
     private BigDecimal valor;
     private Date dataContratacao;
 
-    protected Contratacao(Date dataContratacao, BigDecimal valor, Pacote pacote) {
+    protected Contratacao(Date dataContratacao, Pacote pacote) {
         this.dataContratacao = dataContratacao;
-        this.valor = valor;
         this.pacote = pacote;
+        this.valor = pacote.consolidate();
     }
 }

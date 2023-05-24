@@ -16,8 +16,8 @@ public class Cliente {
         this.contratacoes = new ArrayList<Contratacao>();
     }
 
-    public void contratar(Date dataContratacao, BigDecimal valor, Pacote pacote) {
-        Contratacao contratacao = new Contratacao(dataContratacao, valor, pacote);
+    public void contratar(Date dataContratacao, Pacote pacote) {
+        Contratacao contratacao = new Contratacao(dataContratacao, pacote);
         contratacoes.add(contratacao);
     }
 }
