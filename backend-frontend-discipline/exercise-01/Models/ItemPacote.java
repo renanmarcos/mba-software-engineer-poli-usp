@@ -10,6 +10,6 @@ public class ItemPacote {
     }
 
     public BigDecimal getPreco() {
-        return preco;
+        return this.preco;
     }
 }

@@ -30,9 +30,12 @@ public class Pacote {
 
     public BigDecimal consolidate() {
         BigDecimal valor = new BigDecimal(0);
-        for (ItemPacote i : itens) {
-            valor.add(i.getPreco());
-        }
+
+        if (this.itens != null)
+            for (ItemPacote i : this.itens) {
+                valor = valor.add(i.getPreco());
+            }
+
         return valor;
     }
 }
