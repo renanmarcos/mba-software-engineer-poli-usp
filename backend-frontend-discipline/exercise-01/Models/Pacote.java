@@ -1,6 +1,7 @@
 package Models;
 
 import java.util.List;
+import java.math.BigDecimal;
 
 public class Pacote {
     private String descricao;
@@ -25,5 +26,13 @@ public class Pacote {
         this.descricao = descricao;
         this.localidade = localidade;
         this.itens = itens;
+    }
+
+    public BigDecimal consolidate() {
+        BigDecimal valor = new BigDecimal(0);
+        for (ItemPacote i : itens) {
+            valor.add(i.getPreco());
+        }
+        return valor;
     }
 }

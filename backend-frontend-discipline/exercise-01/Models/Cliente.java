@@ -17,7 +17,7 @@ public class Cliente {
     }
 
     public void contratar(Date dataContratacao, BigDecimal valor, Pacote pacote) {
-        Contratacao contratacao = new Contratacao(dataContratacao, valor, pacote);
+        Contratacao contratacao = new Contratacao(dataContratacao, pacote);
         contratacoes.add(contratacao);
     }
 }
